@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zarzadzaj mailami</title>
+</head>
+<body>
+        <form method="post" action="/add_mail">
+            Dodaj mail<input type="text" name="MAIL_rss" id="MAIL_rss" />
+            <input type="submit" value="Zapisz MAIL" name="Zapisz MAIL"/> <br>
+            Usun Mail(podaj id)<input type="text" name="remove_mail" id="remove_mail" />
+            <input type="submit" value="Usun MAIL" name="Usun MAIL"/> <br>
+            
+            
+             <table border = 1>
+    <tr>
+        <td colspan="2"><h3><center>Lista maili odbiorcow</center></h3></td>
+    </tr>
+    <tr>
+        <td><h4><center>ID</center></h4></td>
+        <td><h4><center>Adres email</center></h4></td>
+  </tr>
+  {% for mails in details %}
+   <tr>
+    <td> {{mails[0]}} </td>
+    <td> {{mails[1]}} </td>
+  </tr>
+  {% endfor %}
+</table>
+        </form>
+
+    
+</body>
+</html>
