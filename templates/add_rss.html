@@ -2,12 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Zarzadzaj RSS'ami</title>
 </head>
 <body>
         <form method="post" action="/add_rss">
             URL RSS <input type="text" name="URL_rss" id="URL_rss" />
             <input type="submit" value="Zapisz RSS" name="Zapisz RSS"/> <br>
+            Usun RSS (podaj id)<input type="text" name="remove_rss" id="remove_rss" />
+            <input type="submit" value="Usun RSS" name="Usun RSS"/> <br>
+            
+            
+             <table border = 1>
+    <tr>
+        <td colspan="2"><h3><center>Lista linków RSS</center></h3></td>
+    </tr>
+    <tr>
+        <td><h4><center>ID</center></h4></td>
+        <td><h4><center>URL</center></h4></td>
+  </tr>
+  {% for rsslink in details %}
+   <tr>
+    <td> {{rsslink[0]}} </td>
+    <td> {{rsslink[1]}} </td>
+  </tr>
+  {% endfor %}
+</table>
         </form>
+
+    
 </body>
 </html>
