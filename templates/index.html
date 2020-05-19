@@ -7,19 +7,29 @@
 <body>
         <form method="post" action="/">
             <input type="submit" value="Wyslij maila" name="Wyslij maila"/> <br><br><br>
-            <button><a href="{{ url_for('add_rss') }}">Dodaj nowe linki RSS!</a></button>
-            </br>
+            <button><a href="{{ url_for('add_rss') }}">Dodaj nowe linki RSS lub usun istniejace!</a></button>
+            <br>
+            <br>
+            <button><a href="{{ url_for('add_mail') }}">Dodaj lub usun emaile odbiorcow!</a></button>
+            <br>
+            <br>
 <table border = 1>
     <tr>
-        <td>
-            <h3>Lista linków RSS</h3>
-        </td>
+        <td colspan="2"><h3><center>Lista linków RSS</center></h3></td>
     </tr>
+    <tr>
+        <td><h4><center>ID</center></h4></td>
+        <td><h4><center>URL</center></h4></td>
+  </tr>
   {% for rsslink in details %}
-  <tr>
+   <tr>
     <td> {{rsslink[0]}} </td>
+    <td> {{rsslink[1]}} </td>
   </tr>
   {% endfor %}
+    <h1>Pogląd wiadomosci rss:</h1><br>
+    <h1>Newsy z świata</h1><br>
+    <div class="wiadomosc">{{wiadomosc|safe}}</div>
 </table>
         </form>
 </body>
