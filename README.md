@@ -17,3 +17,6 @@ Podstrona 1:
 
 Podstrona 2:
 ![alt text](https://i.imgur.com/9kZlCDu.png)
+
+Tak wygląda wiadomość u grupy odbiorców:
+![alt text](https://i.imgur.com/poQhb0c.jpg)
